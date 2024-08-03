@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+# Rapport 
+* Le but de l'exercice est de mettre en place une fonction prenant en paramètres un tableau de 5 éléments et retourne true si un élément du tableau se répète trois fois et un autre élément du tableau se répète deux fois 
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+# Fonctions et commentaires
 
-<body>
-    <?php
-
+`````php
     /**
      * fonction permettant de vérifier si le tableau contient trois et deux éléments de même valeur
      * @param mixed $arr
@@ -56,12 +49,7 @@
     }
     };
     // exemple d'utilisation 
-    echo (verify(["bo","ca", "ca", "ca","bo"])); // doit renvoyer true
+    echo (verify(["bo","ca", "ca", "ca","bo"])) ."<br>"; // doit renvoyer true
     echo (verify(["a", "a", "a", "b", "b"])); // doit renvoyer true
     echo (verify(["a", "b", "c", "b", "c"])); // doit renvoyer false
     echo (verify(["a", "a", "a", "a", "a"])); // doit renvoyer false
-
-    ?>
-</body>
-
-</html>
