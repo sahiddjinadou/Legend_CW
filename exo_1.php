@@ -32,3 +32,10 @@ function verifyArray($array)
     return false;
 }
 
+
+
+// Exemples d'utilisation
+var_dump(verifyArray(["a", "a", "a", "b", "b"])); // true
+var_dump(verifyArray(["a", "b", "c", "b", "c"])); // false
+var_dump(verifyArray(["a", "a", "a", "a", "a"])); // false
+
