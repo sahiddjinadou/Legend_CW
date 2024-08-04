@@ -1,0 +1,34 @@
+<?php
+
+function containsThreeAndTwo($arr) {
+    // Initialiser un tableau pour compter les occurrences de chaque élément
+    $countMap = array();
+    
+    // Compter les occurrences de chaque élément
+    foreach ($arr as $value) {
+        if (isset($countMap[$value])) {
+            $countMap[$value]++;
+        } else {
+            $countMap[$value] = 1;
+        }
+    }
+    
+    // Initialiser les variables pour compter les occurrences spécifiques
+    $countThree = 0;
+    $countTwo = 0;
+    
+    // Vérifier les comptes d'occurrences
+    foreach ($countMap as $count) {
+        if ($count == 3) {
+            $countThree++;
+        } elseif ($count == 2) {
+            $countTwo++;
+        }
+    }
+    
+    // Retourner true si nous avons exactement une occurrence de 3 et une occurrence de 2
+    return $countThree == 1 && $countTwo == 1;
+}
+
+
+?>
