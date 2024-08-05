@@ -16,7 +16,7 @@ function checkArray($array) {
         if ($count == 3) {
             $Three = true; 
         } elseif ($count == 2) {
-            $hasTwo = true; 
+            $Two = true; 
         }
     }
     
