@@ -1,15 +1,19 @@
-# Legend_CW
-Nous allons atteindre le niveau Legends  code war
-
-## PHP
-
-### Exercice 1
-Étant donné un tableau contenant exactement 5 chaînes "a", "b"ou "c"( chars en Java, characters en Fortran), vérifiez si le tableau contient trois et deux des mêmes valeurs.
-
-```php
-Exemples
-["a", "a", "a", "b", "b"] ==> true  // 3x "a" and 2x "b"
-["a", "b", "c", "b", "c"] ==> false // 1x "a", 2x "b" and 2x "c"
-["a", "a", "a", "a", "a"] ==> false // 5x "a"
-```
+function checkArray($tableau) {
+    // Compter les occurrences de chaque valeur
+    $compteur = array_count_values($tableau);
+    
+    // Initialiser les indicateurs pour les conditions
+    $contientTrois = false;
+    $contientDeux = false;
+    
+    // Vérifier les occurrences
+    foreach ($compteur as $valeur => $nombre) {
+        if ($nombre == 3) {
+            $contientTrois = true;
+        } elseif ($nombre == 2) {
+            $contientDeux = true;
+        }
+    }
+    
+}
 
