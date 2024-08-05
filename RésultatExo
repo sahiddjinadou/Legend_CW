@@ -1,0 +1,28 @@
+<?php
+
+function checkArray($array) {
+    // Compter les occurrences de chaque élément dans le tableau
+
+    $counts = array_count_values($array);
+    
+    // Initialiser les compteurs pour les valeurs recherchées
+
+    $Three = false;
+    $Two = false;
+    
+    // Parcourir les valeurs comptées
+
+    foreach ($counts as $key => $count) {
+        if ($count == 3) {
+            $Three = true; 
+        } elseif ($count == 2) {
+            $hasTwo = true; 
+        }
+    }
+    
+    // Retourner vrai si le tableau contient exactement une valeur qui apparaît 3 fois
+    // et une autre valeur qui apparaît 2 fois
+    return $Three && $Two;
+}
+
+?>
