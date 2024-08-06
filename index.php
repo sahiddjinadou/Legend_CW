@@ -1,13 +1,14 @@
 <?php
-function verified($array)
+function distincte($tableau)
 {
-/*Array _count_value Compte les occurrences de chaque valeur distincte dans un tableau
-source: php.net*/
-    $compteur = array_count_values($array);
-    // Retourne un tableau de valeurs indexé.
-    $nombres = array_values($compteur);
-  
-    // La fonction sort permet de trie mon tableau source: php.net
-    sort($nombres);
-    return $nombres;
-}
+    // array_count_values compte  le nombre de fois que les occurrences de chaque valeur distincte dans un tableau sont répétés
+
+
+    $compteur = array_count_values($tableau); 
+    // on récupere le nouveau tableau puis onn trie , en suiter on vérifie la condition
+   $nombre = array_values($compteur );
+  ($nombre); 
+    return $nombre === [2, 3]; }
+$tab=["a", "a", "a", "b", "b"];
+ var_dump(distincte($tab));
+?>
