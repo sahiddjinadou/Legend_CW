@@ -41,10 +41,10 @@
         // si l'on a une triple répétition et une double répétiton 
             if($three_repeat && $two_repeat ){
                 // renvoie de true
-                return "true" ;
+                return true ;
             } else {
                 // sinon renvoi de false
-                return "false";
+                return false;
             }
     }
     };
