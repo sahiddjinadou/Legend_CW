@@ -13,3 +13,22 @@ Exemples
 ["a", "a", "a", "a", "a"] ==> false // 5x "a"
 ```
 
+### Exercice 2
+Votre objectif dans ce kata est d'implémenter une fonction de différence, qui soustrait une liste d'une autre et renvoie le résultat.
+
+Il doit supprimer toutes les valeurs de la liste a, qui sont présentes dans la liste ben conservant leur ordre.
+
+```php
+arrayDiff([1,2],[1]) == [2]
+```
+Si une valeur est présente dans b, toutes ses occurrences doivent être supprimées de l'autre :
+
+```php
+arrayDiff([1,2,2,2,3],[2]) == [1,3]
+```
+#### solution
+````php
+function arrayDiff($a, $b) {
+  // your code here
+}
+```
