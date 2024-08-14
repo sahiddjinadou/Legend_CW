@@ -1,0 +1,23 @@
+Exercice 2
+Votre objectif dans ce kata est d'implémenter une fonction de différence, qui soustrait une liste d'une autre et renvoie le résultat.
+
+Il doit supprimer toutes les valeurs de la liste a, qui sont présentes dans la liste ben conservant leur ordre.
+
+```php
+arrayDiff([1,2],[1]) == [2]
+```
+Si une valeur est présente dans b, toutes ses occurrences doivent être supprimées de l'autre :
+
+```php
+arrayDiff([1,2,2,2,3],[2]) == [1,3]
+```
+#### solution
+````php
+function arrayDiff($a, $b) {
+  // your code here
+}
+```
+ réslution
+ pour ce faire ,on recupère les deux tableau , ensuite on parcours le tableau en vérifiant si l'élément à l'index i de a et égale à celle àl'index y.
+ si a[i]=b[y]alors ,  renvoyer un tableau vide avec unn message "les éléments" sont égaux.
+ sinon , créé un nouveau tableau et push la valeur diférente trouvé
