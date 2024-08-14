@@ -1,3 +1,5 @@
+Exercice 1:
+
 ### Explication du Code`:
 
 - Vérification de la Taille du Tableau : La fonction commence par vérifier que le tableau a exactement 5 éléments. 
@@ -54,3 +56,26 @@ function hasThreeAndTwo ($arr) {
     return $hasTwo && $hasThree;
 }
 ?>
+
+
+Exercice 2:
+
+```
+Explication du code:
+
+- La fonction prend en paramètre deux tableaux a et b
+- Dans la variable résulta la fonction array_diff retoune les éléments du tableau a qui ne sont pas dans le tableau b
+- La fonction array_values quant à elle réorganise le tableau résultat afin que chaque élément soit à la bonne position
+
+<?php
+
+function arrayDiff($a, $b) {
+    // array_diff sert à obtenir les éléments de $a qui ne sont pas dans $b
+    $result = array_diff($a, $b);
+    
+    // array_values pour réindex le tableau résultat
+    return array_values($result);
+}
+
+?>
+
