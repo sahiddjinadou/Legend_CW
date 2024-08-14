@@ -1,5 +1,6 @@
 <?php
-function verified($array) {
+function verified($array)
+{
     // Compter les occurrences de chaque valeur distincte dans le tableau
     $compteur = array_count_values($array);
     // Obtenir les valeurs des comptes
@@ -11,7 +12,7 @@ function verified($array) {
 }
 
 // Test cases
-var_dump(verified(["a", "a", "a", "b", "b"])); 
-var_dump(verified(["a", "b", "c", "b", "c"])); 
-var_dump(verified(["a", "a", "a", "a", "a"])); 
+var_dump(verified(["a", "a", "a", "b", "b"]));
+var_dump(verified(["a", "b", "c", "b", "c"]));
+var_dump(verified(["a", "a", "a", "a", "a"]));
 
