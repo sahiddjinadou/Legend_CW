@@ -13,3 +13,6 @@ function verifyArr($arr)
     return $value === [2, 3]; // on return enfin les valeurs qu'on compare à [2,3].
 }
 ```
+ 
+
+
