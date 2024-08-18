@@ -1,0 +1,12 @@
+<?php
+// Déclaration de la fonction 'arrayDiff' qui prend deux tableaux en paramètres;
+function arrayDiff($a, $b) { // La fonction 'array_diff' retourne les valeurs du tableau $a qui ne sont pas présentes dans le tableau $b;
+    return array_diff($a, $b);
+}
+
+// Appel de la fonction 'arrayDiff' avec les tableaux [1, 2, 2, 2, 3] et [2]
+// La fonction va comparer les deux tableaux et retourner les valeurs présentes dans le premier tableau mais absentes dans le second
+// Dans ce cas, les valeurs 1 et 3 sont présentes dans le premier tableau mais pas dans le second tableau
+print_r(arrayDiff([1, 2, 2, 2, 3], [2]));
+// La fonction 'print_r' affiche le résultat retourné par 'arrayDiff' sur la sortie standard
+// Le résultat affiché sera : Array ( [0] => 1 [3] => 3 )
