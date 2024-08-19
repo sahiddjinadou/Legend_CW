@@ -1,5 +1,3 @@
-<?php
-
 ## Objectif
 # vérifiez si le tableau contient trois et deux des mêmes valeurs.
 
@@ -8,6 +6,7 @@
 # vérifier si l'objectif est atteint et retourner un boolean 
 
 ## Fonction
+````php
 function containsThreeAndTwo($array) {
     // Initialiser un tableau et compter les occurrences de chaque élément
     $arrCount = array();
@@ -22,5 +21,5 @@ function containsThreeAndTwo($array) {
    }
       return $arrCount;
 }
-
+````
 ?>
