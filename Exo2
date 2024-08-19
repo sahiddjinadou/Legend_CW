@@ -1,0 +1,21 @@
+<?php
+function arrayDiff($a, $b) {
+    // Créer un tableau vide pour stocker le résultat
+    $result = [];
+
+    // Parcourir chaque élément de la liste $a
+    foreach ($a as $value) {
+        // Si la valeur n'est pas présente dans la liste $b, l'ajouter au résultat
+        if (!in_array($value, $b)) {
+            $result[] = $value;
+        }
+    }
+
+    // Retourner le tableau résultant
+    return $result;
+}
+
+// Test des exemples donnés
+print_r(arrayDiff([1, 2], [1]));        // Devrait afficher [2]
+print_r(arrayDiff([1, 2, 2, 2, 3], [2])); // Devrait afficher [1, 3]
+?>
