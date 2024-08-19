@@ -27,7 +27,7 @@ Si une valeur est présente dans b, toutes ses occurrences doivent être supprim
 arrayDiff([1,2,2,2,3],[2]) == [1,3]
 ```
 #### solution
-````php
+```php
 function arrayDiff($a, $b) {
   // your code here
 }
