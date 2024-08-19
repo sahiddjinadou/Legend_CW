@@ -1,4 +1,5 @@
 function duplicateCount($text) {
+   
     //je convertit le texte en minuscules et le divise en un tableau de caractères
   
 $characters = str_split(strtolower($text));
