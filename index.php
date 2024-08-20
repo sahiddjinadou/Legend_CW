@@ -59,3 +59,4 @@ function duplicateCount($text) {
     
     return $duplicates;
 }
+echo duplicateCount("bonjour");

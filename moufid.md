@@ -3,6 +3,7 @@
 
 # Fonctions et commentaires
 
+
 `````php
     /**
      * fonction permettant de vérifier si le tableau contient trois et deux éléments de même valeur
