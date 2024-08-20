@@ -1,7 +1,11 @@
-<?php
-function duplicateCount($param)
-{
+# **Rapport**
 
+Le but de l'exercice est de mettre en place une fonction qui prend en paramètres un string et renvoie le nombre de doublons que comporte ce string
+
+# **Commentaires**
+`````php
+function duplicateCount($param): int
+{
   // conversion du paramètre en minuscule pour pourvoir faire les comparaisons 
   $text =strtolower($param);
   // initialisation d'une variable count à 0
@@ -30,9 +34,9 @@ function duplicateCount($param)
   return $count;
 }
 
-
-
-
+/**
+ * exemples d'utilisation
+ */
 // echo duplicateCount("abcde"); //0
 // echo duplicateCount("aabbcde"); //2
 // echo duplicateCount("aabBcde");// 2
@@ -40,5 +44,5 @@ function duplicateCount($param)
 // echo duplicateCount("aA11"); // 2
 // echo duplicateCount("ABBA"); // 2
 
-// echo strtolower("Indivisibilités");
-?>
+
+````
