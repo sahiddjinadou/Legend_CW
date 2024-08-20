@@ -28,6 +28,13 @@ var_dump(arrayDiff([1,2,3,4],[3]));
 //la methode  array_diff, prend deux valeurs en paramètre et recherche l'existence 
 // l'existence de la seconde valeur à l'interieur du premier ,tout en suprrimant la seconde valeur 
 //avec son occurrence ;aussi simple que ça !
+function duplicateCount($text) {
+$char = str_split(strtoupper($text)); //cette methode convertit le texte en majuscule et le divise en un tableau ;
+$counts = array_count_values($characters); //le nombre d'occurrences de chaque caractère esst renvoyé dans un tableau;
+    
+$duplicates = array_filter($counts, fn($count) => $count > 1); //fîltre les caractères qui apparaissent à chaque fois
+return count($duplicates); //On retourne ici le nombre de caractères dupliqués;
+}
 
 ?>
 
