@@ -1,0 +1,6 @@
+function duplicateCount($text) {
+$char = str_split(strtolower($text)); //convertit le texte en minuscules et le divise en un tableau de caractères
+$counts = array_count_values($characters); //le nombre d'occurrences de chaque caractère
+$duplicates = array_filter($counts, fn($count) => $count > 1); //fîltre les caractères qui apparaissent à chaque fois
+return count($duplicates); //retourne le nombre de caractères dupliqués
+}
