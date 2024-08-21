@@ -43,3 +43,4 @@ if (($countA == 3 && $countB == 2) || ($countA == 3 && $countC == 2) ||
 - Nous vérifions toutes les combinaisons possibles où une chaîne pourrait apparaître 3 fois et une autre 2 fois.
 - Si une de ces conditions est vraie, nous retournons `true`.
 - Sinon, nous retournons `false`.
+//
