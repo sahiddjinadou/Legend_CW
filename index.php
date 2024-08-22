@@ -42,7 +42,7 @@ Exercice 4
 
 <?php
 
-function reverseLongWords($str) {
+function spinWords($str) {
     // Séparer la chaîne en mots
     $words = explode(' ', $str);
     
