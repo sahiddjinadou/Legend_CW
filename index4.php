@@ -1,14 +1,37 @@
-function duplicateCount(string $text): int
-{
-    // Convertit la chaîne en minuscules
-    $lowercaseText = strtolower($text);
 
-    // Compte les occurrences de chaque caractère
-    $charCount = array_count_values(str_split($lowercaseText));
+<!-- Écrivez une fonction qui prend une chaîne d'un ou plusieurs mots et renvoie la même chaîne, mais avec tous les mots qui ont cinq lettres ou plus inversés (tout comme le nom de ce Kata). Les chaînes transmises seront constituées uniquement de lettres et d'espaces. Les espaces ne seront inclus que lorsque plusieurs mots sont présents.
 
-    // Compte les caractères qui apparaissent plus d'une fois
-    return count(array_filter($charCount, fn($count) => $count > 1));
+Exemples :
+
+"Hey fellow warriors"  --> "Hey wollef sroirraw" 
+"This is a test        --> "This is a test" 
+"This is another test" --> "This is rehtona test"
+function spinWords(string $str): string {
+  // TODO Have fun :)
+}
+``` -->
+
+<!-- solution -->
+ <!-- pour résoudre ce problème ,  nous allons récupérer le mot  et le convertir   tableau de  c
+  ensuite récuoérer les donnés dans un tableau . Si la longueur du mot est supérieur à 5  , on renverse ce dernier et l'ajpute à un tableau .
+  puis  reconvertir la tableau en un chaine de caratère.
+  -->
+ 
+ 
+ function spinWords($text) {
+
+$words = explode(' ', $text);
+
+$table= [];
+
+foreach ($word as $words) {
+
+if (strlen($word) >= 5) {
+  $word = strrev($word);
 }
 
-echo duplicateCount("aabBcde"); // Affiche 2
-echo duplicateCount("indivisibilité"); // Affiche 1
+$table[] = $word;
+}
+
+
+return implode( $table); }
