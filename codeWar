@@ -1,25 +1,20 @@
-Exercice 1:
+## Exercice 1:
 
 ### Explication du Code`:
 
-- Vérification de la Taille du Tableau : La fonction commence par vérifier que le tableau a exactement 5 éléments.
+- **Vérification de la Taille du Tableau** : La fonction commence par vérifier que le tableau a exactement 5 éléments.
+- **Initialisation des Comptes** : Un tableau est initialisé pour compter les occurrences de chaque caractère.
+- **Comptage des Occurrences** : Une boucle `for` parcourt chaque élément du tableau et incrémente le compteur correspondant dans `$counts`. Si une valeur non attendue est trouvée, la fonction retourne `false`.
+- **Obtention des Fréquences** : Les valeurs du tableau `$counts` sont extraites et stockées dans `$frequencies`.
+- **Vérification des Conditions** : Une autre boucle `for` parcourt les fréquences et vérifie si l'une d'elles est 2 et l'autre est 3.
+- **Résultat** : La fonction retourne `true` si les deux conditions (présence de 2 et 3 occurrences) sont remplies, sinon elle retourne `false`.
 
-- Initialisation des Comptes : Un tableau est initialisé pour compter les occurrences de chaque caractère.
+### Code PHP
 
-- Comptage des Occurrences : Une boucle for parcourt chaque élément du tableau et incrémente le compteur correspondant dans $counts. Si une valeur non attendue est trouvée, la fonction retourne false.
-
-- Obtention des Fréquences : Les valeurs du tableau $counts sont extraites et stockées dans $frequencies.
-
-- Vérification des Conditions : Une autre boucle for parcourt les fréquences et vérifie si l'une d'elles est 2 et l'autre est 3.
-
-- Résultat : La fonction retourne true si les deux conditions (présence de 2 et 3 occurrences) sont remplies, sinon elle retourne false.
-
-``Code PHP``
-
+```php
 <?php
 function hasThreeAndTwo($arr)
 {
-
     // Vérifier que le tableau a exactement 5 éléments
     if (count($arr) != 5) {
         return false;
@@ -59,14 +54,13 @@ function hasThreeAndTwo($arr)
 ?>
 
 
-Exercice 2:
+## Exercice 2:
 
-```
-Explication du code:
+### Explication du code:
 
-- La fonction prend en paramètre deux tableaux a et b
-- Dans la variable résulta la fonction array_diff retoune les éléments du tableau a qui ne sont pas dans le tableau b
-- La fonction array_values quant à elle réorganise le tableau résultat afin que chaque élément soit à la bonne position
+- **La fonction prend en paramètre deux tableaux a et b
+- **Dans la variable résulta la fonction array_diff retoune les éléments du tableau a qui ne sont pas dans le tableau b
+- **La fonction array_values quant à elle réorganise le tableau résultat afin que chaque élément soit à la bonne position
 
 <?php
 
@@ -81,16 +75,15 @@ function arrayDiff($a, $b)
 
 ?>
 
-Exercice 3:
+## Exercice 3:
 
-```
-Explication du code:
+### Explication du code:
 
-- La chaîne ($valleur) est converti en minuscules
-- le tableau tableau tab permet de compter les occurrences de chaque caractère
-- Un compteur est initialiser à 0pour checker les doublons
-- La coondition foreach permet de Boucler sur chaque caractère dans la chaîne
-- A la fin le nombre de doublons est afficher
+- **La chaîne ($valleur) est converti en minuscules
+- **Le tableau tableau tab permet de compter les occurrences de chaque caractère
+- **Un compteur est initialiser à 0pour checker les doublons
+- **La coondition foreach permet de Boucler sur chaque caractère dans la chaîne
+- **A la fin le nombre de doublons est afficher
 
 
 <?php
@@ -115,4 +108,31 @@ function duplicateCount($valeur)
     }
     return $compt;
 }
+?>
+
+## Exercice 4:
+
+### Explication du code:
+
+- **La fonction commence par diviser la chaîne en un tableau de mots en utilisant explode(' ', $str).
+- **Ensuite, elle parcourt chaque mot du tableau avec une boucle foreach.
+- **Pour chaque mot, si sa longueur est supérieure ou égale à 5 caractères (strlen($word) >= 5), il est inversé avec strrev($word).
+- **Enfin, les mots sont réunis en une chaîne avec implode(' ', $words) pour obtenir le résultat.
+
+
+<?php
+
+function spinWords(string $str): string {
+
+    $words = explode(' ', $str);
+    
+    foreach ($words as &$word) {
+        if (strlen($word) >= 5) {
+            $word = strrev($word);
+        }
+    }
+    
+    return implode(' ', $words);
+}
+
 ?>
