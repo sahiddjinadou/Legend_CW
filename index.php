@@ -36,6 +36,37 @@ $duplicates = array_filter($counts, fn($count) => $count > 1); //fîltre les car
 return count($duplicates); //On retourne ici le nombre de caractères dupliqués;
 }
 
+
+
+Exercice 4
+
+<?php
+
+function reverseLongWords($str) {
+    // Séparer la chaîne en mots
+    $words = explode(' ', $str);
+    
+    // Parcourir chaque mot en utilisant une boucle for
+    for ($i = 0; $i < count($words); $i++) {
+        // Vérifier si le mot a cinq lettres ou plus
+        if (strlen($words[$i]) >= 5) {
+            // Inverser le mot
+            $words[$i] = strrev($words[$i]);
+        }
+    }
+    
+    // Rejoindre les mots en une seule chaîne avec des espaces
+    return implode(' ', $words);
+}
+
+// Exemples d'utilisation
+echo reverseLongWords("Hey fellow warriors") . "\n";  // "Hey wollef sroirraw"
+echo reverseLongWords("This is a test") . "\n";       // "This is a test"
+echo reverseLongWords("This is another test") . "\n"; // "This is rehtona test"
+
+?>
+
+
 ?>
 
 
