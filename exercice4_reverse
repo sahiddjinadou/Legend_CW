@@ -1,0 +1,32 @@
+Exercice 4 
+
+Explication :
+explode(' ', $str) : Cette fonction divise la chaîne $str en un tableau $words où chaque élément est un mot. Les espaces sont utilisés comme délimiteurs.
+foreach ($words as &$word) : On parcourt chaque mot ($word) dans le tableau $words. L'opérateur & permet de manipuler directement chaque élément du tableau.
+strlen($word) >= 5 : Vérifie si la longueur du mot $word est de cinq lettres ou plus.
+$word = strrev($word) : Si le mot a cinq lettres ou plus, il est inversé avec strrev().
+implode(' ', $words) : Cette fonction reconstruit la chaîne en joignant les mots du tableau $words avec des espaces.
+return $result : Renvoie la chaîne modifiée.
+
+
+
+
+```` php 
+function spinWords(string $str): string {
+    // Séparation de la chaîne en mots
+    $words = explode(' ', $str);
+    
+    // Parcours des mots pour inverser ceux qui ont cinq lettres ou plus
+    foreach ($words as &$word) {
+        if (strlen($word) >= 5) {
+            $word = strrev($word); // Inversion du mot
+        }
+    }
+    
+    // Reconstitution de la chaîne avec les mots modifiés
+    $result = implode(' ', $words);
+    
+    return $result;
+}
+
+````
