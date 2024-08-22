@@ -2,7 +2,7 @@ Exercice 1:
 
 ### Explication du Code`:
 
-- Vérification de la Taille du Tableau : La fonction commence par vérifier que le tableau a exactement 5 éléments. 
+- Vérification de la Taille du Tableau : La fonction commence par vérifier que le tableau a exactement 5 éléments.
 
 - Initialisation des Comptes : Un tableau est initialisé pour compter les occurrences de chaque caractère.
 
@@ -17,16 +17,17 @@ Exercice 1:
 ``Code PHP``
 
 <?php
-function hasThreeAndTwo ($arr) {
+function hasThreeAndTwo($arr)
+{
 
     // Vérifier que le tableau a exactement 5 éléments
     if (count($arr) != 5) {
         return false;
     }
-    
+
     // Initialiser un tableau pour compter les occurrences
     $counts = ['a' => 0, 'b' => 0, 'c' => 0];
-    
+
     // Compter les occurrences des éléments dans le tableau
     for ($i = 0; $i < count($arr); $i++) {
         $value = $arr[$i];
@@ -37,14 +38,14 @@ function hasThreeAndTwo ($arr) {
             return false;
         }
     }
-    
+
     // Obtenir les fréquences des valeurs
     $frequencies = array_values($counts);
-    
+
     // Vérifier si les fréquences sont exactement 2 et 3
     $hasTwo = false;
     $hasThree = false;
-    
+
     for ($i = 0; $i < count($frequencies); $i++) {
         if ($frequencies[$i] == 2) {
             $hasTwo = true;
@@ -52,7 +53,7 @@ function hasThreeAndTwo ($arr) {
             $hasThree = true;
         }
     }
-    
+
     return $hasTwo && $hasThree;
 }
 ?>
@@ -69,13 +70,49 @@ Explication du code:
 
 <?php
 
-function arrayDiff($a, $b) {
+function arrayDiff($a, $b)
+{
     // array_diff sert à obtenir les éléments de $a qui ne sont pas dans $b
     $result = array_diff($a, $b);
-    
+
     // array_values pour réindex le tableau résultat
     return array_values($result);
 }
 
 ?>
 
+Exercice 3:
+
+```
+Explication du code:
+
+- La chaîne ($valleur) est converti en minuscules
+- le tableau tableau tab permet de compter les occurrences de chaque caractère
+- Un compteur est initialiser à 0pour checker les doublons
+- La coondition foreach permet de Boucler sur chaque caractère dans la chaîne
+- A la fin le nombre de doublons est afficher
+
+
+<?php
+function duplicateCount($valeur)
+{
+
+    $valeur = strtolower($valeur);
+    $tab = [];
+    $compt = 0;
+
+    foreach (str_split($valeur) as $char) {
+
+        if (isset($tab[$char])) {
+            $tab[$char]++;
+
+            if ($tab[$char] == 2) {
+                $compt++;
+            }
+        } else {
+            $tab[$char] = 1;
+        }
+    }
+    return $compt;
+}
+?>
