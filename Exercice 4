@@ -1,0 +1,19 @@
+function spinWords(string $str): string {
+    // On commence par séparer la chaîne de caractères en un tableau de mots
+    // La fonction explode() divise la chaîne en utilisant un espace (" ") comme délimiteur
+    $words = explode(" ", $str);
+
+    // On parcourt chaque mot du tableau
+    foreach ($words as &$word) {  // Le & permet de modifier directement les éléments du tableau
+        // Si la longueur du mot est supérieure ou égale à 5
+        if (strlen($word) >= 5) {
+            // On inverse le mot avec la fonction strrev()
+            $word = strrev($word);
+        }
+    }
+
+    // On réassemble le tableau de mots en une chaîne, en utilisant un espace comme séparateur
+    // La fonction implode() réunit les éléments du tableau en une chaîne
+    return implode(" ", $words);
+}
+
